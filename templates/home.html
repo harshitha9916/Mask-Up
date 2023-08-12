@@ -1,0 +1,82 @@
+<style>
+    body{
+  overflow: auto;
+ 
+  font-family:Tahoma;
+  font-size:15px;
+  
+}
+
+/* Headers Style */
+h1{
+  text-align:center;
+  font-size:5em;
+  color:#fff;
+  text-shadow: 0px 1px 2px #000;
+}
+
+
+/* Image top of the menu */
+.TopImage{
+  position:relative;
+  left:110px;
+  z-index:2;
+  width:300px;
+  margin-bottom:-2px;
+}
+
+.button1 {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+border-radius: 12px;
+}
+
+
+/* CoronaVirus Animation
+Default speed is: 10s
+MoveUpDown is a keyFrames that define the position*/
+.animatediv{
+  animation: MoveUpDown 10s linear infinite;
+  position: absolute;
+  right: 90px;
+  margin-top: -120px;
+
+  }
+/* position of corona animation */
+@keyframes MoveUpDown {
+  0%, 100% {
+    top: 150px;
+  }
+  50% {
+    top: 200px;
+  }
+}
+
+</style>
+<head>
+	<title>Prevention of Coronavirus</title> 
+</head>
+  
+<body background ="{{ url_for('static', filename= 'bg2.jpeg')}}" style = 'background-position: center; background-repeat: no-repeat; background-size: cover;position: relative; margin-top: 50px; height: 700px;'>
+  
+    <img src="{{url_for('static', filename= 'bg.png')}}" style='height: 600px; width: 900px; float:left; margin-left: -15px; margin-top: -50px;'>
+  
+  <div class="animatediv"> 
+  <img src="{{url_for('static', filename= 'virus.png')}}" style='height: 700px; width: 600px;' >
+    </div>
+    
+
+    <form action="/video_feed" method="GET">
+    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
+    <button class='button1' style="margin-left: -600px; margin-top: 110px; width: 300px; height: 100px;">DEMONSTRATE</button>
+    </form>
+</body>
